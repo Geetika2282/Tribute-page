@@ -25,17 +25,19 @@ gsap.to("#main", {
 
 // scroll to id
 document.addEventListener("DOMContentLoaded", function () {
-    var navOptions = document.querySelectorAll('.nav-option');
+    var navOptions = document.querySelectorAll('.links');
     var navbarHeight = document.getElementById('nav').offsetHeight; // Get the height of the navbar
 
     navOptions.forEach(function (option) {
-        option.addEventListener('click', function () {
-            var targetId = option.getAttribute('data-target');
+        option.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default behavior of anchor tags
+
+            var targetId = option.getAttribute('href').substring(1); // Get the target section ID
             var targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                var offset = 100; // Adjust this value as needed
-                var targetPosition = targetElement.offsetTop - navbarHeight - offset;
+                var offset = navbarHeight + 10; // Adjust this value as needed
+                var targetPosition = targetElement.offsetTop - offset;
 
                 window.scrollTo({
                     top: targetPosition,
@@ -43,5 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         });
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var hamburgerBtn = document.getElementById('hamburger-btn');
+    var navLinks = document.getElementById('nav-links');
+
+    hamburgerBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
     });
 });

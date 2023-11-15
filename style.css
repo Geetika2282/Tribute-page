@@ -32,6 +32,7 @@ body {
     z-index: 99;
 }
 
+
 #nav img {
     height: 40px;
 }
@@ -92,9 +93,7 @@ video {
     z-index: -1;
 }
 
-.nav-option {
-    cursor: pointer;
-}
+
 
 #pg1 h2 {
     font-size: 30px;
@@ -178,6 +177,12 @@ video {
     border-color: transparent transparent transparent white;
 }
 
+.links {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
 /* Add arrows to the right container (pointing left) */
 .right::before {
     content: " ";
@@ -205,6 +210,8 @@ video {
     border-radius: 6px;
 }
 
+@media screen and (min-width: 600px) {}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
@@ -212,6 +219,7 @@ video {
     .timeline::after {
         left: 31px;
     }
+
 
     /* Full-width containers */
     .container {
@@ -262,6 +270,7 @@ video {
         margin: 10px 0;
     }
 
+
 }
 
 #pg1 h1 {
@@ -296,4 +305,82 @@ video {
         font-size: 1.2em;
         /* Adjust font size for smaller screens */
     }
+}
+
+/* media query for phone */
+@media screen and (max-width: 600px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav img {
+        display: none;
+        /* Hide the logo/image */
+    }
+
+    #nav a {
+        display: none;
+        /* Hide the navigation links */
+    }
+
+    #nav h4 {
+        display: block;
+        /* Display the h4 element for mobile navigation */
+        margin: 10px 0;
+    }
+
+    #nav.active h4 {
+        display: none;
+        /* Hide the h4 element when the mobile menu is active */
+    }
+
+    #nav.active a {
+        display: block;
+        /* Display the navigation links when the mobile menu is active */
+    }
+}
+
+#nav-links {
+    display: none;
+}
+
+#nav-links {
+    display: flex;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav img {
+        display: none;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links a {
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+    }
+
+
 }
