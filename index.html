@@ -25,29 +25,33 @@
 <body>
     <div id="nav">
         <img src="avatar.png" alt="" />
-        <h4>Biography</h4>
-        <h4>Education</h4>
-        <h4>Apple</h4>
-        <h4>Timeline</h4>
+        <h4 class="nav-option" data-target="pg1">Home</h4>
+        <h4 class="nav-option" data-target="pg2">Biography</h4>
+        <h4 class="nav-option" data-target="pg3">Education</h4>
+        <h4 class="nav-option" data-target="pg4">Apple</h4>
+        <h4 class="nav-option" data-target="timeline">Timeline</h4>
     </div>
 
     <!-- video -->
     <video autoplay muted loop src="vid.mp4"></video>
 
     <div id="main">
+        <!-- home -->
         <div id="pg1" style="color: #fff;">
             <h1>STAY HUNGRY. STAY FOOLISH.</h1>
             <h2>A TRIBUTE TO STEVE JOBS.</h2>
         </div>
-        <div id="pg2" style="color: white; margin: 150px;">
-            <h2>Biography</h2>
+        <div style="color: white; margin: 150px;">
+            <h2 id="pg2">Biography</h2>
             <p>Steven Paul "Steve" Jobs (February 24, 1955 – October 5, 2011) was an American businessman,
                 investor and co-founder and CEO of Apple Inc. He was the Chief Executive Officer (CEO) of Pixar
                 Animation Studios until it was bought by The Walt Disney Company. He was the largest shareholder at
                 Disney and a member of Disney's Board of Directors. He was seen as a leading figure in both the
                 computer and entertainment industries. In August 2011, Jobs resigned, and was appointed Chairman of
-                Apple. He served in that position until he died, at the age of 56, on October 5, 2011 from complications
-                of pancreatitis related to type 1 diabetes and metastatic insulinoma. Steve Jobs had type 1 diabetes as
+                Apple. He served in that position until he died, at the age of 56, on October 5, 2011 from
+                complications
+                of pancreatitis related to type 1 diabetes and metastatic insulinoma. Steve Jobs had type 1 diabetes
+                as
                 a child and had problems with insulin when he died.
             </p>
         </div>
@@ -83,7 +87,7 @@
                 both Apple and the tech world.
             </p>
         </div>
-        <div class="timeline" style="color: black;">
+        <div class="timeline" id="timeline" style="color: black;">
             <h2 style="color: #fff;margin: 100px;">Timeline</h2>
             <div class="container left">
                 <div class="content">

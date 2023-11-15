@@ -92,6 +92,10 @@ video {
     z-index: -1;
 }
 
+.nav-option {
+    cursor: pointer;
+}
+
 #pg1 h2 {
     font-size: 30px;
     font-weight: 800;
